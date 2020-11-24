@@ -1,6 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:breadnow/populares.dart';
-class homescreen extends StatelessWidget {
+import 'package:breadnow/popu_donuts.dart';
+
+void main() =>runApp(homescreen());
+
+class homescreen extends StatefulWidget {
+  @override
+  _homescreenState createState() =>_homescreenState();
+}
+
+class _homescreenState extends State<homescreen> {
+  List<String> ids = [];
+  List<String> ids_sub = [];
+  List<String> ids_image = [];
+  initState() {
+    super.initState();
+    ids.add("Donuts Arcoiris\nSabor Frutilla");
+    ids_sub.add("Dunkin Donuts");
+    ids_image.add('assets/images/arcoiris.jpeg');
+
+    ids.add("Crossaint");
+    ids_sub.add("El Castaño");
+    ids_image.add('assets/images/crossaint.jpeg');
+
+    ids.add("Macarons");
+    ids_sub.add("Pastelería Brownie");
+    ids_image.add('assets/images/macarons.jpeg');
+
+    ids.add("Rollo de Canela");
+    ids_sub.add("Cinnabon");
+    ids_image.add('assets/images/roll.jpeg');
+
+    ids.add("Frappuccino Navidad");
+    ids_sub.add("Starbucks");
+    ids_image.add('assets/images/starbuck.jpeg');
+
+    ids.add("Cheesecake de Berries");
+    ids_sub.add("Bread & Cake");
+    ids_image.add('assets/images/berrie.jpeg');
+
+
+
+
+
+
+
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,8 +138,8 @@ class homescreen extends StatelessWidget {
                        Align(
                         alignment: Alignment.centerLeft,
                         child:Text(
-                        '\n\n   Más Populares',
-                        style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
+                        '\n   Más Populares',
+                        style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
                         ),
                        ),
 
@@ -119,11 +166,16 @@ class homescreen extends StatelessWidget {
                                             :Image.asset('assets/images/cafe.jpg',scale: 1,),
 
 
-                                  onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => populares()),
-                                  );
+                                  onPressed: () { index==0
+                                                  ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_donuts()),)
+                                                  :index==1
+                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => populares()),)
+                                                    :index==2
+                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => populares()),)
+                                                    :Navigator.push(context,MaterialPageRoute(builder: (context) => populares()),);
+                                    
+                                  
+
                                   },
                                   ),
                               ),
@@ -131,27 +183,39 @@ class homescreen extends StatelessWidget {
                             ),
                             ),
 
-              //recomendados imagenes pequeñas 
+              //Nuevoas esta semana imagenes pequeñas 
                            Align(
                             alignment: Alignment.centerLeft,
                             child:Text(
-                            '\n   Recomendados',
-                            style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
+                            '\n   Nuevos esta semana',
+                            style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
                             ),
                           ),
                           Flexible(
-                          flex:10,
-                          child:ListView.builder(
-                            shrinkWrap: true,
-                            itemBuilder: (ctx,int){
-                              return Card(
-                                child: ListTile(
-                                    title: Text('Motivation $int'),
-                                    subtitle: Text('this is a description of the motivation')),
-                            );
-                                },
-                                ),
-                      ),
+                                    flex:13,
+                                    child:ListView.builder(
+                                      itemCount:ids.length,
+                                      shrinkWrap: true,
+                                      itemBuilder: (ctx,idx){
+                                        return Card(
+                                          child: ListTile(
+                                            leading: ConstrainedBox(
+                                            constraints:
+                                                BoxConstraints(minWidth: 10, minHeight: 10),
+                                            child: Image.asset('${ids_image[idx]}',scale: 2.5,),
+                                            ),
+                                              
+                                              title: Text('${ids[idx]}',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                              subtitle: Text('${ids_sub[idx]}'),
+                                          
+
+                                              
+                                              ),
+
+                                      );
+                                          },
+                                          ),
+                          ),
                       
                       
                     ],
@@ -160,5 +224,6 @@ class homescreen extends StatelessWidget {
 
             );
             }
-            }
+}
+            
       

@@ -4,7 +4,7 @@ class populares extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-                      appBar: AppBar( 
+              appBar: AppBar(
               actions: <Widget>[
               IconButton(
               icon: new Icon(Icons.search, color: Colors.black),
@@ -33,6 +33,30 @@ class populares extends StatelessWidget {
               ),
               ),
             ),
+    body: Column(
+      children: <Widget>[
+        Align(
+          alignment: Alignment.centerLeft,
+          child:Text(
+            '\n   Populares: Donuts', style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
+          ),
+        ),
+        Flexible(
+          flex:10,
+          child:ListView.builder(
+            shrinkWrap: true,
+            itemBuilder: (ctx,int){
+              return Card(
+                child: ListTile(
+                    title: Text('Motivation $int'),
+                    subtitle: Text('this is a description of the motivation')),
+            );
+                },
+                ),
+        ),
+      ],
+    ),
+  
     );
   }
 }
