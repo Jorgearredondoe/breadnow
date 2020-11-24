@@ -66,7 +66,7 @@ class _p_donutsState extends State<p_donuts> {
                     Flexible(
                       flex:13,
                       child:ListView.builder(
-                        itemCount:ids.length,
+                        itemCount:itemdonuts.length,
                         shrinkWrap: true,
                         itemBuilder: (ctx,idx){
                           return Card(
@@ -74,11 +74,11 @@ class _p_donutsState extends State<p_donuts> {
                               leading: ConstrainedBox(
                               constraints:
                                   BoxConstraints(minWidth: 10, minHeight: 10),
-                              child: Image.asset('${itemdonuts[idx]}',scale: 2.5,),
+                              child: Image.asset('${itemdonuts_image[idx]}',scale: 2.5,),
                               ),
                                 
-                                title: Text('${itemdonuts_sub[idx]}',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                                subtitle: Text('${itemdonuts_image[idx]}'),
+                                title: Text('${itemdonuts[idx]}',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                subtitle: Text('${itemdonuts_sub[idx]}'),
                             
 
                                 
