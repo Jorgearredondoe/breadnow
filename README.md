@@ -1,16 +1,23 @@
-# breadnow
+# **breadnow**
 
-A new Flutter project.
+Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y opción de personalizar entrega.
 
-## Getting Started
+##**Commit1 19-11-2020**
 
-This project is a starting point for a Flutter application.
+Se respalda todos el código programado hasta el momento. Esto incluye:
+-main.dart: Pantalla de inicio de la aplicación, esta solo puede llevar a registrarse (Signin.dart)
+-signin.dart: pantalla de inicio de sesión, no se encuentra enlazado a una base de datos por lo que lso datos no son guardados.
+-register_complete.dart: Indica que el inicio de sesión fue exitoso.
+-assets: se incluyen las fotos utilizadas en los archivos anteriores.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+##**Commit2 20-11-2020**
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Se agregan los siguientes archivos nuevos:
+cate_desc:
+
+
+
+##**Commit3 24-11-2020**
+
+Commit que incluye un bug en el archivo popu_donuts.dart
