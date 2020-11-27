@@ -1,7 +1,7 @@
-# **breadnow**
+# **breadnow** 
 
 Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y opción de personalizar entrega.
-
+:bread::bread::bread:
 ## **Commit1 19-11-2020**
 
 Se respalda todos el código programado hasta el momento. Esto incluye:
@@ -60,4 +60,4 @@ Archivo | Comentario
 --------|------------
 popu_donuts.dart|Se soluciona el bug de la versión anterior.
 
-**Todos los commits mencionados fueron comentados el día 27-11-2020 (día en que se indicó que es necesario tener esta información), lo que explicaría el poco detlle de cada uno de estos**
+**Todos los commits mencionados fueron comentados el día 27-11-2020 (día en que se indicó que es necesario tener esta información), lo que explicaría el poco detlle de cada uno de estos** :wink:
