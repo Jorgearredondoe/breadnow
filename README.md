@@ -3,7 +3,7 @@
 Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y opción de personalizar entrega.
 :bread::bread::bread:
 
-![Alt text](breadnow/assets/init.png)
+![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/init.png)
 
 
 ## **Commit1 19-11-2020**
@@ -79,8 +79,22 @@ popu_donuts.dart|Se agregan más productos a a la lista. Tiene un bug visual rel
 products.dart|Se crea la clase Product, la cual tiene múltiples atributos las cuales serán utilizadas para el carrito de compras y la creación de lista de productos.
 cart.dart|Página de carrito donde se puede visualizar todos los productos que se han agregado al carrito. Falta agregar un boton de confirmar compra y cambiar el estilo y color de la appbar a la appbar oficial de BREADNOW.
 
-![Alt text](breadnow/assets/bug_popudonut.png)
+![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/bug_popudonut.png)
 
-![Alt text](breadnow/assets/cart.png)
-Aún faltan detalles para tener lista la primera iteración de la app funcional, por lo que se espera que esta iteración se encuentre completa para la versión 3.2.1. Una vez completa esta iteración, se procederá a conectar la app con la base de datos.
+![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/cart.png)
 
+**Aún faltan detalles para tener lista la primera iteración de la app funcional, por lo que se espera que esta iteración se encuentre completa para la versión 3.2.1. Una vez completa esta iteración, se procederá a conectar la app con la base de datos.**
+
+## **Commit: 3.1.2 03-12-2020**
+
+Se soluciona el bug visual (overflow) de popu_donuts.dart. Esto se realiza determinando el tamaño de las iamgenes y de lso textos dentro de cada una de las tarjetas.
+Adicional, en cart.dart se cambia el appbar al appbar oficial de BREADNOW.
+
+Archivo | Comentario
+--------|------------
+popu_donuts.dart|Se soluciona el bug de overflow en cada tarjeta. Esto se soluciona determina el tamaño de las imagenes y textos. Existe todavia un bug de overflow al intentar agrandar la lista, probablemente se encuentra relacionada con el scroll de la página, y widget que no se encuentran limitados.
+cart.dart|Se cambia el appbar al appbar oficial de BREADNOW
+
+![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/bug_popudonut_fix1.1.jpg)
+
+![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/cart_2.jpg)
