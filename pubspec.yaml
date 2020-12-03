@@ -59,6 +59,10 @@ flutter:
     - assets/images/macarons.jpeg
     - assets/images/pie.jpg
     - assets/images/cafe.jpg
+    - assets/images/boston_cream.jpeg
+    - assets/images/donut_arco_choco.jpeg
+    - assets/images/donut_navidad.jpeg
+    - assets/images/manjar_choco.jpeg
 
 
 

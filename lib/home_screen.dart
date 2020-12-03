@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:breadnow/populares.dart';
 import 'package:breadnow/popu_donuts.dart';
+import 'package:flutter/services.dart';
+import 'package:breadnow/products.dart';
+import 'package:breadnow/cart.dart';
+
+  List<Product> _products = List<Product>();
+  List<Product> _cartList = List<Product>();
 
 void main() =>runApp(homescreen());
+
 
 class homescreen extends StatefulWidget {
   @override
@@ -13,8 +20,52 @@ class _homescreenState extends State<homescreen> {
   List<String> ids = [];
   List<String> ids_sub = [];
   List<String> ids_image = [];
+
   initState() {
+
+
+
+    void _populateDonuts() {
+      var list = <Product>[
+        Product(
+          name: 'Donuts Arcoiris\nSabor Frutilla',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/arcoiris.jpeg',
+          
+        ),
+        Product(
+          name: 'Donuts Boston\nSabor Boston Cream',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/boston_cream.jpeg',
+          
+        ),
+        Product(
+          name: 'Donuts Arcoiris\nSabor Chocolate',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/donut_arco_choco.jpeg',
+          
+        ),
+        Product(
+          name: 'Donuts Chocolate\nRellena con manjar',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/manjar_choco.jpeg',
+          
+        ),
+        Product(
+          name: 'Donuts Navidad\Sabor Azucar',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/donut_navidad.jpeg',
+          
+        ),
+      ];
+
+      setState(() {
+        _products = list;
+      });
+    }
+
     super.initState();
+    _populateDonuts();   
     ids.add("Donuts Arcoiris\nSabor Frutilla");
     ids_sub.add("Dunkin Donuts");
     ids_image.add('assets/images/arcoiris.jpeg');
@@ -22,7 +73,7 @@ class _homescreenState extends State<homescreen> {
     ids.add("Crossaint");
     ids_sub.add("El Castaño");
     ids_image.add('assets/images/crossaint.jpeg');
-
+    
     ids.add("Macarons");
     ids_sub.add("Pastelería Brownie");
     ids_image.add('assets/images/macarons.jpeg');
@@ -39,13 +90,6 @@ class _homescreenState extends State<homescreen> {
     ids_sub.add("Bread & Cake");
     ids_image.add('assets/images/berrie.jpeg');
 
-
-
-
-
-
-
-    
   }
 
   @override
@@ -80,6 +124,7 @@ class _homescreenState extends State<homescreen> {
               ),
               ),
             ),
+            
             body: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -90,7 +135,41 @@ class _homescreenState extends State<homescreen> {
                         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),
                       ),
                        ),
- 
+                      GestureDetector(
+                        child: Stack(
+                          alignment: Alignment.topCenter,
+                          children: <Widget>[
+                            Icon(
+                              Icons.shopping_cart,
+                              size: 36.0,
+                            ),
+                            if (_cartList.length > 0)
+                              Padding(
+                                padding: const EdgeInsets.only(left: 2.0),
+                                child: CircleAvatar(
+                                  radius: 8.0,
+                                  backgroundColor: Colors.red,
+                                  foregroundColor: Colors.white,
+                                  child: Text(
+                                    _cartList.length.toString(),
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                        onTap: () {
+                          if (_cartList.isNotEmpty)
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => Cart(_cartList),
+                              ),
+                            );
+                        },
+                      ),
                     //destacados
                       Flexible(
                           flex:3,
@@ -202,7 +281,28 @@ class _homescreenState extends State<homescreen> {
                                             leading: ConstrainedBox(
                                             constraints:
                                                 BoxConstraints(minWidth: 10, minHeight: 10),
-                                            child: Image.asset('${ids_image[idx]}',scale: 2.5,),
+                              child:ButtonTheme(
+   
+                                child: FlatButton(
+                                  color:Colors.white,
+                      
+                                  child: Image.asset('${ids_image[idx]}',scale: 2.5),
+                                        
+
+                                  onPressed: () { idx==0
+                                                  ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_donuts()))
+                                                  :idx==1
+                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_donuts()))
+                                                    :idx==2
+                                                      ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_donuts()))
+                                                      :idx==3
+                                                        ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_donuts()))
+                                                        :idx==4
+                                                          ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_donuts()))
+                                                          :Navigator.push(context,MaterialPageRoute(builder: (context) => p_donuts()));
+                                  },
+                                  ),
+                              ),
                                             ),
                                               
                                               title: Text('${ids[idx]}',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
@@ -210,9 +310,9 @@ class _homescreenState extends State<homescreen> {
                                           
 
                                               
-                                              ),
+                                          ),
 
-                                      );
+                                        );
                                           },
                                           ),
                           ),
@@ -225,5 +325,3 @@ class _homescreenState extends State<homescreen> {
             );
             }
 }
-            
-      

@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:breadnow/products.dart';
+import 'package:breadnow/home_screen.dart';
+import 'package:breadnow/cart.dart';
+
+
+List<Product> _products = List<Product>();
+List<Product> _cartList = List<Product>();
 void main() =>runApp(p_donuts());
 
 class p_donuts extends StatefulWidget {
@@ -11,10 +18,69 @@ class _p_donutsState extends State<p_donuts> {
   List<String> itemdonuts_sub = [];
   List<String> itemdonuts_image = [];
   initState() {
+        void _populateDonuts() {
+      var list = <Product>[
+        Product(
+          name: 'Donuts Arcoiris\nSabor Frutilla',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/arcoiris.jpeg',
+          
+        ),
+        Product(
+          name: 'Donuts Boston\nSabor Boston Cream',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/boston_cream.jpeg',
+          
+        ),
+        Product(
+          name: 'Donuts Arcoiris\nSabor Chocolate',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/donut_arco_choco.jpeg',
+          
+        ),
+        Product(
+          name: 'Donuts Chocolate\nRellena con manjar',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/manjar_choco.jpeg',
+          
+        ),
+        Product(
+          name: 'Donuts Navidad\Sabor Azucar',
+          subname: 'Dunkin Donuts',
+          image: 'assets/images/donut_navidad.jpeg',
+          
+        ),
+      ];
+
+      setState(() {
+        _products = list;
+      });
+    }
+
     super.initState();
+    _populateDonuts();   
     itemdonuts.add("Donuts Arcoiris\nSabor Frutilla");
     itemdonuts_sub.add("Dunkin Donuts");
     itemdonuts_image.add('assets/images/arcoiris.jpeg');
+
+    itemdonuts.add("Donuts Boston\nSabor Boston Cream");
+    itemdonuts_sub.add("Dunkin Donuts");
+    itemdonuts_image.add('assets/images/boston_cream.jpeg');
+
+
+    itemdonuts.add("Donuts Arcoiris\nSabor Chocolate");
+    itemdonuts_sub.add("Dunkin Donuts");
+    itemdonuts_image.add('assets/images/donut_arco_choco.jpeg');
+
+
+    itemdonuts.add("Donuts Chocolate\nRellena con manjar");
+    itemdonuts_sub.add("Dunkin Donuts");
+    itemdonuts_image.add('assets/images/manjar_choco.jpeg');
+
+
+    itemdonuts.add("Donuts Navidad\Sabor Azucar");
+    itemdonuts_sub.add("Dunkin Donuts");
+    itemdonuts_image.add('assets/images/donut_navidad.jpeg');
 
     
   }
@@ -63,30 +129,104 @@ class _p_donutsState extends State<p_donuts> {
                         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),
                       ),
                     ),
-                    Flexible(
-                      flex:13,
-                      child:ListView.builder(
-                        itemCount:itemdonuts.length,
-                        shrinkWrap: true,
-                        itemBuilder: (ctx,idx){
-                          return Card(
-                            child: ListTile(
-                              leading: ConstrainedBox(
-                              constraints:
-                                  BoxConstraints(minWidth: 10, minHeight: 10),
-                              child: Image.asset('${itemdonuts_image[idx]}',scale: 2.5,),
-                              ),
-                                
-                                title: Text('${itemdonuts[idx]}',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                                subtitle: Text('${itemdonuts_sub[idx]}'),
-                            
-
-                                
+                    GestureDetector(
+                      child: Stack(
+                        alignment: Alignment.topCenter,
+                        children: <Widget>[
+                          Icon(
+                            Icons.shopping_cart,
+                            size: 36.0,
+                          ),
+                          if (_cartList.length > 0)
+                            Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: CircleAvatar(
+                                radius: 8.0,
+                                backgroundColor: Colors.red,
+                                foregroundColor: Colors.white,
+                                child: Text(
+                                  _cartList.length.toString(),
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12.0,
+                                  ),
                                 ),
-
-                        );
-                            },
+                              ),
                             ),
+                        ],
+                      ),
+                      onTap: () {
+                        if (_cartList.isNotEmpty)
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => Cart(_cartList),
+                            ),
+                          );
+                      },
+                    ),
+
+                  
+                    GridView.builder(
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.all(4.0),
+                      gridDelegate:
+                          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+                        
+                        itemCount:_products.length,
+            
+                        itemBuilder: (ctx,idx){
+                          var item = _products[idx];
+                          return Card(
+                            elevation:4.0,
+                            child: Stack(
+                              
+                              fit: StackFit.loose,
+                              alignment: Alignment.center,
+                              
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Image.asset(item.image,scale: 10.5),
+                                    Text(item.name,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                    Text(item.subname),
+                                  ],
+                                ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                            right: 8.0,
+                                            bottom: 8.0,
+                                          ),
+                                          child: Align(
+                                            alignment: Alignment.bottomRight,
+                                            child: GestureDetector(
+                                              child: (!_cartList.contains(item))
+                                                  ? Icon(
+                                                      Icons.add_circle,
+                                                      color: Colors.green,
+                                                    )
+                                                  : Icon(
+                                                      Icons.remove_circle,
+                                                      color: Colors.red,
+                                                    ),
+                                              onTap: () {
+                                                setState(() {
+                                                  if (_cartList.contains(item))
+                                                    _cartList.remove(item);
+                                                  else
+                                                    _cartList.add(item);
+                                                });
+                                              },
+                                            ),
+                                          ),
+                                                     
+                                        ),
+                              ],
+                            ),
+                          );
+                        }, 
+                            
                       ),
 
 
