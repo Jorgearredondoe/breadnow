@@ -132,10 +132,10 @@ checkout.dart|Se crea siguiente página de carrito de compra, aun no se agrega n
 build.gradle|Se agregan métodos que permiten la conexión con google.
 scroll_list_example.dart|Archivo de pruebas es eliminado
 
-**Proximas actualizaciones:
--Funcionamiento de Firebase en conjunto con la app.
--Función que calcula la suma total de la compra.
--Mejora en el sistema de carrito.
--Login, conectado a Database.
--Opción de entrar como registrado.
--MUCHAS MÁS!!!! :wink::wink::wink::wink::wink:
+**Proximas actualizaciones:**
+*Funcionamiento de Firebase en conjunto con la app.
+*Función que calcula la suma total de la compra.
+*Mejora en el sistema de carrito.
+*Login, conectado a Database.
+*Opción de entrar como registrado.
+*MUCHAS MÁS!!!! :wink::wink::wink::wink::wink:
