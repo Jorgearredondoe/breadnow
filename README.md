@@ -1,8 +1,7 @@
-# **breadnow** 
-<center>![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/images/icon.png)</center>
+# **breadnow** >
 
 <p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/images/icon.png">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/images/icon.png">
 </p>
 
 Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y opción de personalizar entrega.
@@ -10,7 +9,9 @@ Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y 
 
 **“¡Tu pan favorito al instante!”**
 
-<center>![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/init.png)</center>
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/init.png">
+</p>
 
 
 ## **Commit1 19-11-2020**
@@ -86,9 +87,14 @@ popu_donuts.dart|Se agregan más productos a a la lista. Tiene un bug visual rel
 products.dart|Se crea la clase Product, la cual tiene múltiples atributos las cuales serán utilizadas para el carrito de compras y la creación de lista de productos.
 cart.dart|Página de carrito donde se puede visualizar todos los productos que se han agregado al carrito. Falta agregar un boton de confirmar compra y cambiar el estilo y color de la appbar a la appbar oficial de BREADNOW.
 
-<center>![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/bug_popudonut.png)</center>
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/bug_popudonut.png">
+</p>
 
-<center>![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/cart.png)</center>
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/cart.png">
+</p>
+
 
 **Aún faltan detalles para tener lista la primera iteración de la app funcional, por lo que se espera que esta iteración se encuentre completa para la versión 3.2.1. Una vez completa esta iteración, se procederá a conectar la app con la base de datos.**
 
@@ -102,9 +108,14 @@ Archivo | Comentario
 popu_donuts.dart|Se soluciona el bug de overflow en cada tarjeta. Esto se soluciona determina el tamaño de las imagenes y textos. Existe todavia un bug de overflow al intentar agrandar la lista, probablemente se encuentra relacionada con el scroll de la página, y widget que no se encuentran limitados.
 cart.dart|Se cambia el appbar al appbar oficial de BREADNOW
 
-<center>![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/bug_popudonut_fix1.1.jpg)</center>
 
-<center>![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/cart_2.jpg)</center>
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/bug_popudonut_fix1.1.jpg">
+</p>
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/cart_2.jpg">
+</p>
 
 
 ## **Commit: 3.2.1 03-12-2020**
