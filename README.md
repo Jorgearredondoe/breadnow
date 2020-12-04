@@ -133,9 +133,15 @@ build.gradle|Se agregan métodos que permiten la conexión con google.
 scroll_list_example.dart|Archivo de pruebas es eliminado
 
 **Proximas actualizaciones:**
-*Funcionamiento de Firebase en conjunto con la app.
-*Función que calcula la suma total de la compra.
-*Mejora en el sistema de carrito.
-*Login, conectado a Database.
-*Opción de entrar como registrado.
-*MUCHAS MÁS!!!! :wink::wink::wink::wink::wink:
+
+
+<ul>
+<li>Funcionamiento de Firebase en conjunto con la app</li>
+<li>Función que calcula la suma total de la compra</li>
+<li>Mejora en el sistema de carrito</li>
+<li>Login, conectado a Database</li>
+<li>Opción de entrar como registrado</li>
+<li>MUCHAS MÁS!!!! :wink::wink::wink::wink::wink:</li>
+
+</ul>
+
