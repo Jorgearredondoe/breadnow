@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "3417922293",
+    "firebase_url": "https://breadnow-a490f-default-rtdb.firebaseio.com",
+    "project_id": "breadnow-a490f",
+    "storage_bucket": "breadnow-a490f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3417922293:android:51e157fbacf4a9e811c3bc",
+        "android_client_info": {
+          "package_name": "com.example.breadnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3417922293-5aa3rr1l73i9morkci3ibv4hinb8tuk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTSTX1dWnh0YLv37xB6q_zatecBIRjmeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3417922293-5aa3rr1l73i9morkci3ibv4hinb8tuk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

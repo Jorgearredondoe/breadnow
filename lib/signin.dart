@@ -7,6 +7,7 @@ class signinroute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         body: Center(
         child:Column(
 
@@ -26,16 +27,23 @@ class signinroute extends StatelessWidget {
               ),),
 
 
-            Image.asset(
+            Flexible(
+              flex:5,
+              child:Image.asset(
             'assets/images/shorticon.png',
             scale: 3.0
             ),
-            new Container(
-            margin:new EdgeInsets.all(20.0),
+            ),
+            Flexible(
+              flex:10,
+            child:new Container(
+            margin:new EdgeInsets.all(20.5),
             child: Column(
             children: <Widget>[
            //nombre y apellido
             TextFormField(
+            validator: (value) =>
+            value.isEmpty ? "First name cannot be empty" : null,
             decoration: InputDecoration(
             labelText: 'Nombre y Apellido'
             ),
@@ -68,10 +76,13 @@ class signinroute extends StatelessWidget {
             ],
             ),
             ),
+            ),
             
 
             //boton de registrarse, falta agregar verificacion
-            ButtonTheme(
+            Flexible(
+              flex:2,
+              child:ButtonTheme(
             minWidth: 250.0,
             height: 40.0,
             child:RaisedButton(
@@ -89,6 +100,7 @@ class signinroute extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
 
             ), 
+            ),
             ),
           ],
 

@@ -25,47 +25,9 @@ class _homescreenState extends State<homescreen> {
 
 
 
-    void _populateDonuts() {
-      var list = <Product>[
-        Product(
-          name: 'Donuts Arcoiris\nSabor Frutilla',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/arcoiris.jpeg',
-          
-        ),
-        Product(
-          name: 'Donuts Boston\nSabor Boston Cream',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/boston_cream.jpeg',
-          
-        ),
-        Product(
-          name: 'Donuts Arcoiris\nSabor Chocolate',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/donut_arco_choco.jpeg',
-          
-        ),
-        Product(
-          name: 'Donuts Chocolate\nRellena con manjar',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/manjar_choco.jpeg',
-          
-        ),
-        Product(
-          name: 'Donuts Navidad\Sabor Azucar',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/donut_navidad.jpeg',
-          
-        ),
-      ];
 
-      setState(() {
-        _products = list;
-      });
-    }
 
     super.initState();
-    _populateDonuts();   
     ids.add("Donuts Arcoiris\nSabor Frutilla");
     ids_sub.add("Dunkin Donuts");
     ids_image.add('assets/images/arcoiris.jpeg');
@@ -128,14 +90,7 @@ class _homescreenState extends State<homescreen> {
             body: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                       Align(
-                        alignment: Alignment.centerLeft,
-                      child:Text(
-                        '\n       Categorías',
-                        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),
-                      ),
-                       ),
-                      GestureDetector(
+                                            GestureDetector(
                         child: Stack(
                           alignment: Alignment.topCenter,
                           children: <Widget>[
@@ -170,6 +125,14 @@ class _homescreenState extends State<homescreen> {
                             );
                         },
                       ),
+                       Align(
+                        alignment: Alignment.centerLeft,
+                      child:Text(
+                        '\n       Categorías',
+                        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),
+                      ),
+                       ),
+
                     //destacados
                       Flexible(
                           flex:3,

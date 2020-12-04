@@ -9,6 +9,7 @@ List<Product> _cartList = List<Product>();
 void main() =>runApp(p_donuts());
 
 class p_donuts extends StatefulWidget {
+  
   @override
   _p_donutsState createState() =>_p_donutsState();
 }
@@ -24,30 +25,40 @@ class _p_donutsState extends State<p_donuts> {
           name: 'Donuts Arcoiris\nSabor Frutilla',
           subname: 'Dunkin Donuts',
           image: 'assets/images/arcoiris.jpeg',
+          price_str: '\$800',
+          price: 800,
           
         ),
         Product(
           name: 'Donuts Boston',
           subname: 'Dunkin Donuts',
           image: 'assets/images/boston_cream.jpeg',
+          price_str: '\$1200',
+          price: 1200,
           
         ),
         Product(
           name: 'Donuts Arcoiris\nSabor Chocolate',
           subname: 'Dunkin Donuts',
           image: 'assets/images/donut_arco_choco.jpeg',
+          price_str: '\$800',
+          price: 800,
           
         ),
         Product(
           name: 'Donuts Chocolate',
           subname: 'Dunkin Donuts',
           image: 'assets/images/manjar_choco.jpeg',
+          price_str: '\$1100',
+          price: 1100,
           
         ),
         Product(
           name: 'Donuts Navidad',
           subname: 'Dunkin Donuts',
           image: 'assets/images/donut_navidad.jpeg',
+          price_str: '\$1500',
+          price: 1500,
           
         ),
       ];
@@ -191,10 +202,11 @@ class _p_donutsState extends State<p_donuts> {
                                   children: <Widget>[
                                     Image.asset(
                                       item.image,
-                                      width:60,
-                                      height:60,
+                                      width:50,
+                                      height:50,
                                       ),
                                     Text(item.name,style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
+                                    Text(item.price_str,style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
                                     Text(item.subname,style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold)),
                                   ],
 

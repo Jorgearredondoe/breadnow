@@ -1,6 +1,8 @@
 import 'package:breadnow/products.dart';
 import 'package:flutter/material.dart';
 import 'package:breadnow/main.dart';
+import 'package:breadnow/checkout.dart';
+
 
 class Cart extends StatefulWidget {
   final List<Product> _cart;
@@ -19,7 +21,7 @@ class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+
                appBar: AppBar(
               actions: <Widget>[
               IconButton(
@@ -50,34 +52,87 @@ class _CartState extends State<Cart> {
               ),
             ),
 
-      body: ListView.builder(
-          itemCount: _cart.length,
-          itemBuilder: (context, index) {
-            var item = _cart[index];
-            return Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
-              child: Card(
-                elevation: 4.0,
-                child: ListTile(
-                  leading: Image.asset(
-                    item.image,
+      body: Column(
+        children: <Widget>[
+        Flexible(
+          flex:10,
+          child:ListView.builder(
+            itemCount: _cart.length,
+            itemBuilder: (context, index) {
+              var item = _cart[index];
+              return Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
+                child: Card(
+                  elevation: 4.0,
+                  child: ListTile(
+                    leading: Image.asset(
+                      item.image,
+                    ),
+                    title: Text(item.name),
+                    trailing: GestureDetector(
+                        child: Icon(
+                          Icons.remove_circle,
+                          color: Colors.red,
+                        ),
+                        onTap: () {
+                          setState(() {
+                            _cart.remove(item);
+                          });
+                        }),
                   ),
-                  title: Text(item.name),
-                  trailing: GestureDetector(
-                      child: Icon(
-                        Icons.remove_circle,
-                        color: Colors.red,
-                      ),
-                      onTap: () {
-                        setState(() {
-                          _cart.remove(item);
-                        });
-                      }),
                 ),
-              ),
+              );
+            }
+            
+            ),
+        ),
+        
+        Flexible(
+          
+          flex:1,
+          child:ListView.builder(
+            itemCount: _cart.length,
+            itemBuilder: (context, idx) {
+              
+              var item2 = _cart[idx];
+              return Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
+                child:Text('Price'),
+            
+               );
+            }
+              )
+        ),
+        
+             
+
+        
+        Flexible(
+          flex:1,
+          child:ButtonTheme(
+          minWidth: 300.0,
+          height: 40.0,
+          child:RaisedButton(
+          child: Text("Continuar Compra", style: TextStyle(fontSize:20, fontStyle: FontStyle.normal,fontWeight: FontWeight.bold, color: Colors.white),),
+          shape: RoundedRectangleBorder(  
+          borderRadius: BorderRadius.circular(5)),
+          //metodo que lleva a signin.dart 
+          onPressed: () { 
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => check()),
             );
-          }),
+          },
+          color: Colors.blue[900],
+          padding: EdgeInsets.all(8.0),
+
+          ), 
+          ),
+        ),
+        ],
+      ), 
     );
   }
 }

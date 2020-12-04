@@ -6,9 +6,10 @@ class Product {
   final String name;
   final String subname;
   final String image;
+  final String price_str;
   final int price;
 
-  Product({this.name, this.subname, this.image, this.price});
+  Product({this.name, this.subname, this.image,this.price_str, this.price});
 
   
 }
