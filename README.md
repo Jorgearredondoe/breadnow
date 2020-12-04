@@ -1,11 +1,9 @@
 # **breadnow** 
 <center>![Alt text](https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/images/icon.png)</center>
 
-<table>
-  <tr>
-    <td valign="top"><img src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/images/icon.png"/></td>
-  </tr>
-</table>
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/images/icon.png">
+</p>
 
 Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y opción de personalizar entrega.
 :bread::bread::bread:
