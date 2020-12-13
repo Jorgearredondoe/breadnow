@@ -64,6 +64,8 @@ class _CartState extends State<Cart> {
             itemCount: _cart.length,
             itemBuilder: (context, index) {
               var item = _cart[index];
+              //var text=item.name;
+              //text+=item.price_str;
               return Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
@@ -73,8 +75,14 @@ class _CartState extends State<Cart> {
                     leading: Image.asset(
                       item.image,
                     ),
-                    title: Text(item.name),
-                    trailing: GestureDetector(
+                    
+                    title: Text(item.name,style: TextStyle(fontSize: 17)),
+                      trailing: Wrap(
+                        spacing: 12,          
+                        children: <Widget>[
+                        Text(item.price_str,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                    
+                        GestureDetector(
                         child: Icon(
                           Icons.remove_circle,
                           color: Colors.red,
@@ -84,6 +92,9 @@ class _CartState extends State<Cart> {
                             _cart.remove(item);
                           });
                         }),
+                        ],
+                      ),
+
                   ),
                 ),
               );

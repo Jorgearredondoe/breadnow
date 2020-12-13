@@ -152,3 +152,19 @@ Se realiza la función que suma el valor total del carrito. Esta se encuentra en
 Archivo | Comentario
 --------|------------
 cart.dart|Se agrega correctamente la función getCartTotal, la cual entrega la suma total del carrito de compras
+
+
+
+## **Commit: 3.3.1 13-12-2020**
+
+Se agrega barra de navegación al pie de página, además de cambiar la ubicación del icono de carrito de compras. Se modifcia el archivo popu_marraqueta, sin embargo, aun falta agregar los items de esta pagina, por lo que aparecen donuts en lugar de pan. Se soluciona bug de las paginas popu_xxx, donde no se permitia realizar scroll hacia abajo (producia overflow), ahora lo permite debido a que se agrego un "SingleChildScrollView". Por ultimo, a cart.dart se le agrego el precio individual a cada item por medio del usoo de un wrap.
+Aun se debe agregar los archivos y direcciones para la barra de navegación.
+
+Archivo | Comentario
+--------|------------
+cart.dart|Se agrega el precio de cada producto. Se agrega barra de navegación y se cambia posición de icono de carrito.
+home_screen.dart|Se agrega barra de navegación y se cambia posición de icono de carrito.
+popu_donuts.dart|Se agrega barra de navegación y se cambia posición de icono de carrito. Se soluciona bug de overflow, agregando scroll vertical.
+popu_marraqueta.dart|Se direcciona al apretar la imagen de marraqueta de home_screen.dart, sección de "Más populares". Es una copia de popu_donuts, se deben agregar los items correspondientes a pan, por lo que aparecen donuts en su lugar _(placeholders).
+
+

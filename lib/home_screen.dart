@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:breadnow/populares.dart';
 import 'package:breadnow/popu_donuts.dart';
+import 'package:breadnow/popu_marraqueta.dart';
 import 'package:flutter/services.dart';
 import 'package:breadnow/products.dart';
 import 'package:breadnow/cart.dart';
@@ -22,9 +23,6 @@ class _homescreenState extends State<homescreen> {
   List<String> ids_image = [];
 
   initState() {
-
-
-
 
 
     super.initState();
@@ -59,9 +57,40 @@ class _homescreenState extends State<homescreen> {
     return Scaffold(
               appBar: AppBar( 
               actions: <Widget>[
-              IconButton(
-              icon: new Icon(Icons.search, color: Colors.black),
-              onPressed: () => Navigator.pushReplacementNamed(context,"/home_screen"), 
+                GestureDetector(
+                  child: Stack(
+                    alignment: Alignment.topCenter,
+                    children: <Widget>[
+                      Icon(
+                        Icons.shopping_cart,
+                        size: 48.0,
+                      ),
+                      if (_cartList.length > 0)
+                        Padding(
+                          padding: const EdgeInsets.only(left: 2.0),
+                          child: CircleAvatar(
+                            radius: 8.0,
+                            backgroundColor: Colors.red,
+                            foregroundColor: Colors.white,
+                            child: Text(
+                              _cartList.length.toString(),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                  onTap: () {
+                    if (_cartList.isNotEmpty)
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => Cart(_cartList),
+                        ),
+                      );
+                  },
                 ),
               ],
 
@@ -90,41 +119,7 @@ class _homescreenState extends State<homescreen> {
             body: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                                            GestureDetector(
-                        child: Stack(
-                          alignment: Alignment.topCenter,
-                          children: <Widget>[
-                            Icon(
-                              Icons.shopping_cart,
-                              size: 36.0,
-                            ),
-                            if (_cartList.length > 0)
-                              Padding(
-                                padding: const EdgeInsets.only(left: 2.0),
-                                child: CircleAvatar(
-                                  radius: 8.0,
-                                  backgroundColor: Colors.red,
-                                  foregroundColor: Colors.white,
-                                  child: Text(
-                                    _cartList.length.toString(),
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 12.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                          ],
-                        ),
-                        onTap: () {
-                          if (_cartList.isNotEmpty)
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => Cart(_cartList),
-                              ),
-                            );
-                        },
-                      ),
+
                        Align(
                         alignment: Alignment.centerLeft,
                       child:Text(
@@ -211,10 +206,10 @@ class _homescreenState extends State<homescreen> {
                                   onPressed: () { index==0
                                                   ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_donuts()),)
                                                   :index==1
-                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => populares()),)
+                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_pan()),)
                                                     :index==2
-                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => populares()),)
-                                                    :Navigator.push(context,MaterialPageRoute(builder: (context) => populares()),);
+                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_pan()),)
+                                                    :Navigator.push(context,MaterialPageRoute(builder: (context) => p_pan()),);
                                     
                                   
 
@@ -283,6 +278,54 @@ class _homescreenState extends State<homescreen> {
                       
                     ],
                   ),
+                    bottomNavigationBar: new Container(
+                        height: 80.0,
+                        color: Colors.white,
+                        padding: new EdgeInsets.only(top: 20.0),
+                        child: new Theme(
+
+                          data: Theme.of(context).copyWith(
+                            // sets the background color of the `BottomNavigationBar`
+                              canvasColor: Colors.white,
+                              // sets the active color of the `BottomNavigationBar` if `Brightness` is light
+                              primaryColor: Colors.red,
+                              bottomAppBarColor: Colors.green,
+                              textTheme: Theme
+                                  .of(context)
+                                  .textTheme
+                                  .copyWith(caption: new TextStyle(color: Colors.grey))), // sets the inactive color of the `BottomNavigationBar`
+                          child:
+                          new BottomNavigationBar(
+                              type: BottomNavigationBarType.fixed,
+                              currentIndex:0 ,
+                              items: [
+                                BottomNavigationBarItem(
+                                    icon: new Icon(Icons.home),
+                                    title: new Text('Home'),
+                                    backgroundColor: Colors.black
+                                ),
+                                BottomNavigationBarItem(
+                                  icon: new Icon(Icons.search),
+                                  title: new Text('Search'),
+                                ),
+                  BottomNavigationBarItem(
+                                    icon: Icon(Icons.bookmark_border,color: Colors.transparent,),
+                                    title: Text('Center')
+                                ),
+
+                                BottomNavigationBarItem(
+                                    icon: Icon(Icons.perm_identity),
+                                    title: Text('Person')
+                                ),
+                                BottomNavigationBarItem(
+                                    icon: Icon(Icons.more_horiz),
+                                    title: Text('More')
+                                ),
+
+                              ]),
+                        ),
+                      ),
+
               
 
             );

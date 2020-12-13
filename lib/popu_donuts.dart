@@ -101,45 +101,13 @@ class _p_donutsState extends State<p_donuts> {
     return Scaffold(
                appBar: AppBar(
               actions: <Widget>[
-              IconButton(
-              icon: new Icon(Icons.search, color: Colors.black),
-              onPressed: () => Navigator.pushReplacementNamed(context,"/home_screen"), 
-                ),
-              ],
-
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                    Image.asset(
-                      'assets/images/shorticon.png',scale: 2.5,
-                    ),
-                ],
-              ),        
-              backgroundColor: Colors.grey[300], 
-              elevation: 20.0,
-
-              //esto saca el boton de "return"
-              automaticallyImplyLeading: true, 
-
-              //forma del appbar
-              shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(30),
-              ),
-              ),
-            ),
-
-
-            body: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
                       GestureDetector(
                       child: Stack(
                         alignment: Alignment.topCenter,
                         children: <Widget>[
                           Icon(
                             Icons.shopping_cart,
-                            size: 36.0,
+                            size: 48.0,
                           ),
                           if (_cartList.length > 0)
                             Padding(
@@ -168,11 +136,41 @@ class _p_donutsState extends State<p_donuts> {
                           );
                       },
                     ),
+              ],
+
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                    Image.asset(
+                      'assets/images/shorticon.png',scale: 2.5,
+                    ),
+                ],
+              ),        
+              backgroundColor: Colors.grey[300], 
+              elevation: 20.0,
+
+              //esto saca el boton de "return"
+              automaticallyImplyLeading: true, 
+
+              //forma del appbar
+              shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(30),
+              ),
+              ),
+            ),
+
+
+            body: SingleChildScrollView(
+                child:Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                     
 
                     Align(
                         alignment: Alignment.centerLeft,
                         child:Text(
-                        '\n       Categorías',
+                        '\n       Populares: Donuts',
                         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),
                       ),
                     ),
@@ -252,6 +250,56 @@ class _p_donutsState extends State<p_donuts> {
 
                     ]
             )
+            ),
+
+             bottomNavigationBar: new Container(
+                height: 80.0,
+                color: Colors.white,
+                padding: new EdgeInsets.only(top: 20.0),
+                child: new Theme(
+
+                  data: Theme.of(context).copyWith(
+                    // sets the background color of the `BottomNavigationBar`
+                      canvasColor: Colors.white,
+                      // sets the active color of the `BottomNavigationBar` if `Brightness` is light
+                      primaryColor: Colors.red,
+                      bottomAppBarColor: Colors.green,
+                      textTheme: Theme
+                          .of(context)
+                          .textTheme
+                          .copyWith(caption: new TextStyle(color: Colors.grey))), // sets the inactive color of the `BottomNavigationBar`
+                  child:
+                  new BottomNavigationBar(
+                      type: BottomNavigationBarType.fixed,
+                      currentIndex:0 ,
+                      items: [
+                        BottomNavigationBarItem(
+                            icon: new Icon(Icons.home),
+                            title: new Text('Home'),
+                            backgroundColor: Colors.black
+                        ),
+                        BottomNavigationBarItem(
+                          icon: new Icon(Icons.search),
+                          title: new Text('Search'),
+                        ),
+          BottomNavigationBarItem(
+                            icon: Icon(Icons.bookmark_border,color: Colors.transparent,),
+                            title: Text('Center')
+                        ),
+
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.perm_identity),
+                            title: Text('Person')
+                        ),
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.more_horiz),
+                            title: Text('More')
+                        ),
+
+            ]),
+      ),
+    ),
+
     );
   }
 }
