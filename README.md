@@ -145,3 +145,10 @@ scroll_list_example.dart|Archivo de pruebas es eliminado
 
 </ul>
 
+## **Commit: 3.2.2 13-12-2020**
+
+Se realiza la función que suma el valor total del carrito. Esta se encuentra en eel archivo cart.dart y tiene el nombre de getCartTotal. Basicamente esta itera a través de toda la lista de productos agregados al carrito y va sumando el valor de esto. Luego este valor de tipo integer es transformado a string y es retornado para ser visualizado en la aplicación.
+
+Archivo | Comentario
+--------|------------
+cart.dart|Se agrega correctamente la función getCartTotal, la cual entrega la suma total del carrito de compras

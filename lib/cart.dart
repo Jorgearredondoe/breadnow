@@ -4,6 +4,7 @@ import 'package:breadnow/main.dart';
 import 'package:breadnow/checkout.dart';
 
 
+
 class Cart extends StatefulWidget {
   final List<Product> _cart;
 
@@ -18,12 +19,15 @@ class _CartState extends State<Cart> {
 
   List<Product> _cart;
 
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+              
                appBar: AppBar(
               actions: <Widget>[
+             
               IconButton(
               icon: new Icon(Icons.search, color: Colors.black),
               onPressed: () => Navigator.pushReplacementNamed(context,"/home_screen"), 
@@ -91,26 +95,22 @@ class _CartState extends State<Cart> {
         Flexible(
           
           flex:1,
-          child:ListView.builder(
-            itemCount: _cart.length,
-            itemBuilder: (context, idx) {
-              
-              var item2 = _cart[idx];
-              return Padding(
+
+              child:Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
-                child:Text('Price'),
+                    const EdgeInsets.symmetric(horizontal: 0, vertical: 2.0),
+                child:Text(getCartTotal(), style: TextStyle(fontSize:25, fontStyle: FontStyle.normal,fontWeight: FontWeight.bold, color: Colors.black),),
             
-               );
-            }
-              )
+               ),
+            
+              
         ),
         
              
 
         
         Flexible(
-          flex:1,
+          flex:2,
           child:ButtonTheme(
           minWidth: 300.0,
           height: 40.0,
@@ -135,4 +135,16 @@ class _CartState extends State<Cart> {
       ), 
     );
   }
+    String getCartTotal() {
+    var total=0;
+    for(int i =0; i<_cart.length;i++)
+    {
+      total+=_cart[i].price;
+    }
+    String total_str;
+    total_str="Total a Pagar: ";
+    total_str+=total.toString();
+    return total_str;
+  }
+
 }
