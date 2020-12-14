@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:breadnow/populares.dart';
 import 'package:breadnow/popu_donuts.dart';
 import 'package:breadnow/popu_marraqueta.dart';
+import 'package:breadnow/popu_pie.dart';
 import 'package:flutter/services.dart';
 import 'package:breadnow/products.dart';
 import 'package:breadnow/cart.dart';
@@ -208,7 +209,7 @@ class _homescreenState extends State<homescreen> {
                                                   :index==1
                                                     ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_pan()),)
                                                     :index==2
-                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_pan()),)
+                                                    ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_pie()),)
                                                     :Navigator.push(context,MaterialPageRoute(builder: (context) => p_pan()),);
                                     
                                   

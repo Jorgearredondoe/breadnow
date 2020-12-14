@@ -14,6 +14,9 @@ Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y 
 </p>
 
 
+---------------------------------------------
+
+
 ## **Commit1 19-11-2020**
 
 Se respalda todos el código programado hasta el momento. Esto incluye:
@@ -23,6 +26,10 @@ main.dart| Pantalla de inicio de la aplicación, esta solo puede llevar a regist
 signin.dart| pantalla de inicio de sesión, no se encuentra enlazado a una base de datos por lo que los datos no son guardados.
 register_complete.dart| Indica que el inicio de sesión fue exitoso.
 assets| se incluyen las fotos utilizadas en los archivos anteriores.
+
+
+---------------------------------------------
+
 
 ## **Commit2 20-11-2020**
 
@@ -49,6 +56,9 @@ home_screen.dart|Se realizan modificaciones de las listas de arrastres e imágen
 main.dart|Modificaciones menores.
 
 
+---------------------------------------------
+
+
 ## **Commit3 24-11-2020**
 
 Commit que incluye un bug en el archivo popu_donuts.dart
@@ -62,6 +72,9 @@ popu_donuts.dart|Se agregan nuevas imágenes y elementos a la lista. Se genera u
 populares.dart|Modificaciones menores.
 
 
+---------------------------------------------
+
+
 ## **Commit3.1 24-11-2020**
 
 Soluciona el bug del archivo popu_donuts.dart
@@ -73,6 +86,9 @@ Archivo | Comentario
 popu_donuts.dart|Se soluciona el bug de la versión anterior.
 
 **Todos los commits mencionados fueron comentados el día 27-11-2020 (día en que se indicó que es necesario tener esta información), lo que explicaría el poco detalle de cada uno de estos. De ahora en adelante se continuara con el numero de versión correspondiente** :wink:
+
+
+---------------------------------------------
 
 
 ## **Commit: 3.1.1 02-12-2020**
@@ -98,6 +114,10 @@ cart.dart|Página de carrito donde se puede visualizar todos los productos que s
 
 **Aún faltan detalles para tener lista la primera iteración de la app funcional, por lo que se espera que esta iteración se encuentre completa para la versión 3.2.1. Una vez completa esta iteración, se procederá a conectar la app con la base de datos.**
 
+
+
+---------------------------------------------
+
 ## **Commit: 3.1.2 03-12-2020**
 
 Se soluciona el bug visual (overflow) de popu_donuts.dart. Esto se realiza determinando el tamaño de las iamgenes y de lso textos dentro de cada una de las tarjetas.
@@ -116,6 +136,9 @@ cart.dart|Se cambia el appbar al appbar oficial de BREADNOW
 <p align="center">
   <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/cart_2.jpg">
 </p>
+
+
+---------------------------------------------
 
 
 ## **Commit: 3.2.1 03-12-2020**
@@ -145,6 +168,9 @@ scroll_list_example.dart|Archivo de pruebas es eliminado
 
 </ul>
 
+
+---------------------------------------------
+
 ## **Commit: 3.2.2 13-12-2020**
 
 Se realiza la función que suma el valor total del carrito. Esta se encuentra en eel archivo cart.dart y tiene el nombre de getCartTotal. Basicamente esta itera a través de toda la lista de productos agregados al carrito y va sumando el valor de esto. Luego este valor de tipo integer es transformado a string y es retornado para ser visualizado en la aplicación.
@@ -153,6 +179,8 @@ Archivo | Comentario
 --------|------------
 cart.dart|Se agrega correctamente la función getCartTotal, la cual entrega la suma total del carrito de compras
 
+
+---------------------------------------------
 
 
 ## **Commit: 3.3.1 13-12-2020**
@@ -167,4 +195,21 @@ home_screen.dart|Se agrega barra de navegación y se cambia posición de icono d
 popu_donuts.dart|Se agrega barra de navegación y se cambia posición de icono de carrito. Se soluciona bug de overflow, agregando scroll vertical.
 popu_marraqueta.dart|Se direcciona al apretar la imagen de marraqueta de home_screen.dart, sección de "Más populares". Es una copia de popu_donuts, se deben agregar los items correspondientes a pan, por lo que aparecen donuts en su lugar _(placeholders).
 
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_mod1.jpeg">
+</p>
 
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_mod2.jpeg">
+</p>
+
+---------------------------------------------
+
+## **Commit: 3.3.2 14-12-2020**
+Se agrega imagenes para popu_marraqueta.dart y se configura la página popu_pie.dart, ambas funcionando correctamente con el carrito de compras.
+
+Archivo | Comentario
+--------|------------
+home_screen.dart|Se agrega dirección a popu_pie.dart.
+popu_marraqueta.dart|Se agregan las respectivas iamgenes de los productos con sus precios.
+popu_pie.dart|Se crea la página correctamente y se agregan las respectivas iamgenes de los productos con sus precios.

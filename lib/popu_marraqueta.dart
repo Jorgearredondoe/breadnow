@@ -20,41 +20,49 @@ class _p_panState extends State<p_pan> {
         void _populateDonuts() {
       var list = <Product>[
         Product(
-          name: 'Donuts Arcoiris\nSabor Frutilla',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/arcoiris.jpeg',
-          price_str: '\$800',
-          price: 800,
+          name: 'Hallulla',
+          subname: 'Panadería',
+          image: 'assets/images/hallulla.jpeg',
+          price_str: '\$200',
+          price: 200,
           
         ),
         Product(
-          name: 'Donuts Boston',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/boston_cream.jpeg',
-          price_str: '\$1200',
-          price: 1200,
+          name: 'Colisa',
+          subname: 'Panadería',
+          image: 'assets/images/colisa.jpeg',
+          price_str: '\$300',
+          price: 300,
           
         ),
         Product(
-          name: 'Donuts Arcoiris\nSabor Chocolate',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/donut_arco_choco.jpeg',
-          price_str: '\$800',
-          price: 800,
+          name: 'Marraqueta',
+          subname: 'Panadería',
+          image: 'assets/images/marraqueta_small.jpeg',
+          price_str: '\$200',
+          price: 200,
           
         ),
         Product(
-          name: 'Donuts Chocolate',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/manjar_choco.jpeg',
+          name: 'Pan Hamburguesa',
+          subname: 'Panadería',
+          image: 'assets/images/hamburguesa.jpeg',
           price_str: '\$1100',
           price: 1100,
           
         ),
         Product(
-          name: 'Donuts Navidad',
-          subname: 'Dunkin Donuts',
-          image: 'assets/images/donut_navidad.jpeg',
+          name: 'Pan Hot Dog',
+          subname: 'Panadería',
+          image: 'assets/images/hotdog.jpeg',
+          price_str: '\$350',
+          price: 350,
+          
+        ),
+          Product(
+          name: 'Pan Integral',
+          subname: 'Panadería',
+          image: 'assets/images/integral.jpeg',
           price_str: '\$1500',
           price: 1500,
           
