@@ -13,7 +13,8 @@ Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y 
   <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/init.png">
 </p>
 
-
+<br>
+<br>
 ---------------------------------------------
 
 
@@ -27,7 +28,8 @@ signin.dart| pantalla de inicio de sesión, no se encuentra enlazado a una base 
 register_complete.dart| Indica que el inicio de sesión fue exitoso.
 assets| se incluyen las fotos utilizadas en los archivos anteriores.
 
-
+<br>
+<br>
 ---------------------------------------------
 
 
@@ -55,7 +57,8 @@ Archivo | Comentario
 home_screen.dart|Se realizan modificaciones de las listas de arrastres e imágenes a utilizar.
 main.dart|Modificaciones menores.
 
-
+<br>
+<br>
 ---------------------------------------------
 
 
@@ -71,7 +74,8 @@ home_screen.dart|Se agregan imágenes a "Destacados".
 popu_donuts.dart|Se agregan nuevas imágenes y elementos a la lista. Se genera un bug que genera un crash en la app.
 populares.dart|Modificaciones menores.
 
-
+<br>
+<br>
 ---------------------------------------------
 
 
@@ -87,7 +91,8 @@ popu_donuts.dart|Se soluciona el bug de la versión anterior.
 
 **Todos los commits mencionados fueron comentados el día 27-11-2020 (día en que se indicó que es necesario tener esta información), lo que explicaría el poco detalle de cada uno de estos. De ahora en adelante se continuara con el numero de versión correspondiente** :wink:
 
-
+<br>
+<br>
 ---------------------------------------------
 
 
@@ -115,7 +120,8 @@ cart.dart|Página de carrito donde se puede visualizar todos los productos que s
 **Aún faltan detalles para tener lista la primera iteración de la app funcional, por lo que se espera que esta iteración se encuentre completa para la versión 3.2.1. Una vez completa esta iteración, se procederá a conectar la app con la base de datos.**
 
 
-
+<br>
+<br>
 ---------------------------------------------
 
 ## **Commit: 3.1.2 03-12-2020**
@@ -137,7 +143,8 @@ cart.dart|Se cambia el appbar al appbar oficial de BREADNOW
   <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/cart_2.jpg">
 </p>
 
-
+<br>
+<br>
 ---------------------------------------------
 
 
@@ -168,7 +175,8 @@ scroll_list_example.dart|Archivo de pruebas es eliminado
 
 </ul>
 
-
+<br>
+<br>
 ---------------------------------------------
 
 ## **Commit: 3.2.2 13-12-2020**
@@ -179,7 +187,8 @@ Archivo | Comentario
 --------|------------
 cart.dart|Se agrega correctamente la función getCartTotal, la cual entrega la suma total del carrito de compras
 
-
+<br>
+<br>
 ---------------------------------------------
 
 
@@ -202,7 +211,8 @@ popu_marraqueta.dart|Se direcciona al apretar la imagen de marraqueta de home_sc
 <p align="center">
   <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_mod2.jpeg">
 </p>
-
+<br>
+<br>
 ---------------------------------------------
 
 ## **Commit: 3.3.2 14-12-2020**
@@ -211,5 +221,31 @@ Se agrega imagenes para popu_marraqueta.dart y se configura la página popu_pie.
 Archivo | Comentario
 --------|------------
 home_screen.dart|Se agrega dirección a popu_pie.dart.
-popu_marraqueta.dart|Se agregan las respectivas iamgenes de los productos con sus precios.
+popu_marraqueta.dart|Se agregan las respectivas imagenes de los productos con sus precios.
 popu_pie.dart|Se crea la página correctamente y se agregan las respectivas iamgenes de los productos con sus precios.
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_popupan.jpeg">
+</p>
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_popupie.jpeg">
+</p>
+<br>
+<br>
+---------------------------------------------
+
+## **Commit: 3.3.3 14-12-2020**
+Se configura la página popu_cafe.dart.
+
+Archivo | Comentario
+--------|------------
+home_screen.dart|Se agrega dirección a popu_cafe.dart.
+popu_cafe.dart|Se agregan las respectivas imagenes de los productos con sus precios.
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_popucafe.jpeg">
+</p>
+<br>
+<br>
+---------------------------------------------

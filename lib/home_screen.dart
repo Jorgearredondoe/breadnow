@@ -3,6 +3,7 @@ import 'package:breadnow/populares.dart';
 import 'package:breadnow/popu_donuts.dart';
 import 'package:breadnow/popu_marraqueta.dart';
 import 'package:breadnow/popu_pie.dart';
+import 'package:breadnow/popu_cafe.dart';
 import 'package:flutter/services.dart';
 import 'package:breadnow/products.dart';
 import 'package:breadnow/cart.dart';
@@ -154,7 +155,7 @@ class _homescreenState extends State<homescreen> {
                                   child: index ==0
                                           ? Text('Destacados',style: TextStyle(fontSize: 15),)
                                           : index==1
-                                            ?Text('Cerca de ti',style: TextStyle(fontSize: 15),)
+                                            ?Text('Novedades',style: TextStyle(fontSize: 15),)
                                             :index==2
                                               ?Text('Descuento',style: TextStyle(fontSize: 15),)
                                               :Text('Delivery Gratis',style: TextStyle(fontSize: 15),),
@@ -210,7 +211,7 @@ class _homescreenState extends State<homescreen> {
                                                     ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_pan()),)
                                                     :index==2
                                                     ?Navigator.push(context,MaterialPageRoute(builder: (context) => p_pie()),)
-                                                    :Navigator.push(context,MaterialPageRoute(builder: (context) => p_pan()),);
+                                                    :Navigator.push(context,MaterialPageRoute(builder: (context) => p_cafe()),);
                                     
                                   
 

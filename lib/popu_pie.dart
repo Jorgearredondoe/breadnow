@@ -148,7 +148,7 @@ class _p_pieState extends State<p_pie> {
                     Align(
                         alignment: Alignment.centerLeft,
                         child:Text(
-                        '\n       Populares: Pan',
+                        '\n       Populares: Pasteles',
                         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),
                       ),
                     ),
