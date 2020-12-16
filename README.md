@@ -15,6 +15,8 @@ Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y 
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 
@@ -30,6 +32,8 @@ assets| se incluyen las fotos utilizadas en los archivos anteriores.
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 
@@ -59,6 +63,8 @@ main.dart|Modificaciones menores.
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 
@@ -76,6 +82,8 @@ populares.dart|Modificaciones menores.
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 
@@ -93,6 +101,8 @@ popu_donuts.dart|Se soluciona el bug de la versión anterior.
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 
@@ -122,6 +132,8 @@ cart.dart|Página de carrito donde se puede visualizar todos los productos que s
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 ## **Commit: 3.1.2 03-12-2020**
@@ -145,6 +157,8 @@ cart.dart|Se cambia el appbar al appbar oficial de BREADNOW
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 
@@ -177,6 +191,8 @@ scroll_list_example.dart|Archivo de pruebas es eliminado
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 ## **Commit: 3.2.2 13-12-2020**
@@ -189,6 +205,8 @@ cart.dart|Se agrega correctamente la función getCartTotal, la cual entrega la s
 
 <br>
 <br>
+
+
 ---------------------------------------------
 
 
@@ -213,6 +231,8 @@ popu_marraqueta.dart|Se direcciona al apretar la imagen de marraqueta de home_sc
 </p>
 <br>
 <br>
+
+
 ---------------------------------------------
 
 ## **Commit: 3.3.2 14-12-2020**
@@ -233,6 +253,8 @@ popu_pie.dart|Se crea la página correctamente y se agregan las respectivas iamg
 </p>
 <br>
 <br>
+
+
 ---------------------------------------------
 
 ## **Commit: 3.3.3 14-12-2020**
@@ -248,4 +270,23 @@ popu_cafe.dart|Se agregan las respectivas imagenes de los productos con sus prec
 </p>
 <br>
 <br>
+
+
 ---------------------------------------------
+
+
+## **Commit: 3.4.1 16-12-2020**
+Se configura la página signin.dart. Incluye ahora validación de los campos a rellenar por medio del uso de Regex, de esta forma, la aplicación nor permite registrarse si no se rellenan correctamente los campos.
+
+Archivo | Comentario
+--------|------------
+signin.dart|Se configura la página signin para que incluya validación por medio de Regex.
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_sign1.jpeg">
+</p>
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_sign2.jpeg">
+</p>
+<br>
+<br>

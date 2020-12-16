@@ -9,6 +9,7 @@ class register_comp extends StatelessWidget {
         child:Column(
 
           children: <Widget>[
+            
 
             Image.asset(
             'assets/images/shorticon.png',
