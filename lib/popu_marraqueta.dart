@@ -47,7 +47,7 @@ class _p_panState extends State<p_pan> {
           name: 'Pan Hamburguesa',
           subname: 'Panadería',
           image: 'assets/images/hamburguesa.jpeg',
-          price_str: '\$1100',
+          price_str: '\$1.100',
           price: 1100,
           
         ),
@@ -63,7 +63,7 @@ class _p_panState extends State<p_pan> {
           name: 'Pan Integral',
           subname: 'Panadería',
           image: 'assets/images/integral.jpeg',
-          price_str: '\$1500',
+          price_str: '\$1.500',
           price: 1500,
           
         ),
@@ -85,12 +85,17 @@ class _p_panState extends State<p_pan> {
   Widget build(BuildContext context) {
     return Scaffold(
                appBar: AppBar(
+                     iconTheme: IconThemeData(
+                    color: Colors.black, 
+                  ),
               actions: <Widget>[
                       GestureDetector(
                       child: Stack(
                         children: <Widget>[
                           Icon(
                             Icons.shopping_cart,
+                            color:Colors.black,
+
                             size: 48.0,
                           ),
                           if (_cartList.length > 0)
@@ -192,6 +197,36 @@ class _p_panState extends State<p_pan> {
                                 ),
                                         Padding(
                                           padding: const EdgeInsets.only(
+                                            left: 8.0,
+                                            bottom: 8.0,
+                                          ),
+                                          child: Align(
+                                            alignment: Alignment.bottomLeft,
+                                            child: GestureDetector(
+                                              child: (!_cartList.contains(item))
+                                                  ? Icon(
+                                                      Icons.remove_circle,
+                                                      color: Colors.white,
+                                                    )
+                                                  : Icon(
+                                                      Icons.remove_circle,
+                                                      color: Colors.red,
+                                                    ),
+                                              onTap: () {
+                                                setState(() {
+                                                  if (_cartList.contains(item))
+                                                    _cartList.remove(item);
+                                                  else
+                                                    var uit=0;
+                                                });
+                                              },
+                                            ),
+                                          ),
+                                                     
+                                        ),
+
+                                        Padding(
+                                          padding: const EdgeInsets.only(
                                             right: 8.0,
                                             bottom: 8.0,
                                           ),
@@ -204,14 +239,11 @@ class _p_panState extends State<p_pan> {
                                                       color: Colors.green,
                                                     )
                                                   : Icon(
-                                                      Icons.remove_circle,
-                                                      color: Colors.red,
+                                                      Icons.add_circle,
+                                                      color: Colors.green,
                                                     ),
                                               onTap: () {
                                                 setState(() {
-                                                  if (_cartList.contains(item))
-                                                    _cartList.remove(item);
-                                                  else
                                                     _cartList.add(item);
                                                 });
                                               },
@@ -232,53 +264,6 @@ class _p_panState extends State<p_pan> {
                     ]
             ),
             ),
-    bottomNavigationBar: new Container(
-      height: 80.0,
-      color: Colors.white,
-      padding: new EdgeInsets.only(top: 20.0),
-      child: new Theme(
-
-        data: Theme.of(context).copyWith(
-          // sets the background color of the `BottomNavigationBar`
-            canvasColor: Colors.white,
-            // sets the active color of the `BottomNavigationBar` if `Brightness` is light
-            primaryColor: Colors.red,
-            bottomAppBarColor: Colors.green,
-            textTheme: Theme
-                .of(context)
-                .textTheme
-                .copyWith(caption: new TextStyle(color: Colors.grey))), // sets the inactive color of the `BottomNavigationBar`
-        child:
-        new BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            currentIndex:0 ,
-            items: [
-              BottomNavigationBarItem(
-                  icon: new Icon(Icons.home),
-                  title: new Text('Home'),
-                  backgroundColor: Colors.black
-              ),
-              BottomNavigationBarItem(
-                icon: new Icon(Icons.search),
-                title: new Text('Search'),
-              ),
-BottomNavigationBarItem(
-                  icon: Icon(Icons.bookmark_border,color: Colors.transparent,),
-                  title: Text('Center')
-              ),
-
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.perm_identity),
-                  title: Text('Person')
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.more_horiz),
-                  title: Text('More')
-              ),
-
-            ]),
-      ),
-    ),
 
     );
   }

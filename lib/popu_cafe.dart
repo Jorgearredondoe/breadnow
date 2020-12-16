@@ -23,7 +23,7 @@ class _p_cafeState extends State<p_cafe> {
           name: 'Café Americano',
           subname: 'Cafetería',
           image: 'assets/images/americano.jpeg',
-          price_str: '\$1800',
+          price_str: '\$1.800',
           price: 1800,
           
         ),
@@ -31,7 +31,7 @@ class _p_cafeState extends State<p_cafe> {
           name: 'Café Capuccino',
           subname: 'Cafetería',
           image: 'assets/images/capuccino.jpeg',
-          price_str: '\$2000',
+          price_str: '\$2.000',
           price: 2000,
           
         ),
@@ -39,7 +39,7 @@ class _p_cafeState extends State<p_cafe> {
           name: 'Café Expresso',
           subname: 'Cafetería',
           image: 'assets/images/expresso.jpeg',
-          price_str: '\$1000',
+          price_str: '\$1.000',
           price: 1000,
           
         ),
@@ -47,7 +47,7 @@ class _p_cafeState extends State<p_cafe> {
           name: 'Frapuccino Chocolate',
           subname: 'Starbucks',
           image: 'assets/images/frapuccino.jpeg',
-          price_str: '\$4000',
+          price_str: '\$4.000',
           price: 4000,
           
         ),
@@ -55,7 +55,7 @@ class _p_cafeState extends State<p_cafe> {
           name: 'Frapuccino Manjar',
           subname: 'Starbucks',
           image: 'assets/images/frapuccino2.jpeg',
-          price_str: '\$4000',
+          price_str: '\$4.000',
           price: 4000,
           
         ),
@@ -63,7 +63,7 @@ class _p_cafeState extends State<p_cafe> {
           name: 'Café Latte',
           subname: 'Cafetería',
           image: 'assets/images/latte.jpeg',
-          price_str: '\$1900',
+          price_str: '\$1.900',
           price: 1900,
           
         ),
@@ -85,63 +85,18 @@ class _p_cafeState extends State<p_cafe> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-
-      bottomNavigationBar: new Container(
-      height: 80.0,
-      color: Colors.white,
-      padding: new EdgeInsets.only(top: 20.0),
-      child: new Theme(
-
-        data: Theme.of(context).copyWith(
-          // sets the background color of the `BottomNavigationBar`
-            canvasColor: Colors.white,
-            // sets the active color of the `BottomNavigationBar` if `Brightness` is light
-            primaryColor: Colors.red,
-            bottomAppBarColor: Colors.green,
-            textTheme: Theme
-                .of(context)
-                .textTheme
-                .copyWith(caption: new TextStyle(color: Colors.grey))), // sets the inactive color of the `BottomNavigationBar`
-        child:
-        new BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            currentIndex:4 ,
-            items: [
-              BottomNavigationBarItem(
-                  icon: new Icon(Icons.home),
-                  title: new Text('Home'),
-                  backgroundColor: Colors.black,
-                         
-              ),
-              BottomNavigationBarItem(
-                icon: new Icon(Icons.search),
-                title: new Text('Search'),
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.bookmark_border,color: Colors.transparent,),
-                  title: Text('Center')
-              ),
-
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.perm_identity),
-                  title: Text('Person')
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.more_horiz),
-                  title: Text('More')
-              ),
-
-            ]),
-      ),
-    ),
-
                appBar: AppBar(
+                 iconTheme: IconThemeData(
+                    color: Colors.black, 
+                  ),
               actions: <Widget>[
                       GestureDetector(
                       child: Stack(
                         children: <Widget>[
                           Icon(
                             Icons.shopping_cart,
+                             color:Colors.black,
+
                             size: 48.0,
                           ),
                           if (_cartList.length > 0)
@@ -243,6 +198,36 @@ class _p_cafeState extends State<p_cafe> {
                                 ),
                                         Padding(
                                           padding: const EdgeInsets.only(
+                                            left: 8.0,
+                                            bottom: 8.0,
+                                          ),
+                                          child: Align(
+                                            alignment: Alignment.bottomLeft,
+                                            child: GestureDetector(
+                                              child: (!_cartList.contains(item))
+                                                  ? Icon(
+                                                      Icons.remove_circle,
+                                                      color: Colors.white,
+                                                    )
+                                                  : Icon(
+                                                      Icons.remove_circle,
+                                                      color: Colors.red,
+                                                    ),
+                                              onTap: () {
+                                                setState(() {
+                                                  if (_cartList.contains(item))
+                                                    _cartList.remove(item);
+                                                  else
+                                                    var uit=0;
+                                                });
+                                              },
+                                            ),
+                                          ),
+                                                     
+                                        ),
+
+                                        Padding(
+                                          padding: const EdgeInsets.only(
                                             right: 8.0,
                                             bottom: 8.0,
                                           ),
@@ -255,14 +240,11 @@ class _p_cafeState extends State<p_cafe> {
                                                       color: Colors.green,
                                                     )
                                                   : Icon(
-                                                      Icons.remove_circle,
-                                                      color: Colors.red,
+                                                      Icons.add_circle,
+                                                      color: Colors.green,
                                                     ),
                                               onTap: () {
                                                 setState(() {
-                                                  if (_cartList.contains(item))
-                                                    _cartList.remove(item);
-                                                  else
                                                     _cartList.add(item);
                                                 });
                                               },

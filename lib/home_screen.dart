@@ -20,6 +20,7 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
+
   List<String> ids = [];
   List<String> ids_sub = [];
   List<String> ids_image = [];
@@ -56,7 +57,7 @@ class _homescreenState extends State<homescreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new Scaffold(
               appBar: AppBar( 
               actions: <Widget>[
                 GestureDetector(
@@ -65,6 +66,7 @@ class _homescreenState extends State<homescreen> {
                     children: <Widget>[
                       Icon(
                         Icons.shopping_cart,
+                        color:Colors.black,
                         size: 48.0,
                       ),
                       if (_cartList.length > 0)
@@ -280,53 +282,8 @@ class _homescreenState extends State<homescreen> {
                       
                     ],
                   ),
-                    bottomNavigationBar: new Container(
-                        height: 80.0,
-                        color: Colors.white,
-                        padding: new EdgeInsets.only(top: 20.0),
-                        child: new Theme(
+                         
 
-                          data: Theme.of(context).copyWith(
-                            // sets the background color of the `BottomNavigationBar`
-                              canvasColor: Colors.white,
-                              // sets the active color of the `BottomNavigationBar` if `Brightness` is light
-                              primaryColor: Colors.red,
-                              bottomAppBarColor: Colors.green,
-                              textTheme: Theme
-                                  .of(context)
-                                  .textTheme
-                                  .copyWith(caption: new TextStyle(color: Colors.grey))), // sets the inactive color of the `BottomNavigationBar`
-                          child:
-                          new BottomNavigationBar(
-                              type: BottomNavigationBarType.fixed,
-                              currentIndex:0 ,
-                              items: [
-                                BottomNavigationBarItem(
-                                    icon: new Icon(Icons.home),
-                                    title: new Text('Home'),
-                                    backgroundColor: Colors.black
-                                ),
-                                BottomNavigationBarItem(
-                                  icon: new Icon(Icons.search),
-                                  title: new Text('Search'),
-                                ),
-                  BottomNavigationBarItem(
-                                    icon: Icon(Icons.bookmark_border,color: Colors.transparent,),
-                                    title: Text('Center')
-                                ),
-
-                                BottomNavigationBarItem(
-                                    icon: Icon(Icons.perm_identity),
-                                    title: Text('Person')
-                                ),
-                                BottomNavigationBarItem(
-                                    icon: Icon(Icons.more_horiz),
-                                    title: Text('More')
-                                ),
-
-                              ]),
-                        ),
-                      ),
 
               
 

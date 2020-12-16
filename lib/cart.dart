@@ -26,12 +26,11 @@ class _CartState extends State<Cart> {
     return Scaffold(
               
                appBar: AppBar(
+                 iconTheme: IconThemeData(
+                    color: Colors.black, 
+                  ),
               actions: <Widget>[
              
-              IconButton(
-              icon: new Icon(Icons.search, color: Colors.black),
-              onPressed: () => Navigator.pushReplacementNamed(context,"/home_screen"), 
-                ),
               ],
 
               title: Row(
@@ -153,8 +152,10 @@ class _CartState extends State<Cart> {
       total+=_cart[i].price;
     }
     String total_str;
-    total_str="Total a Pagar: ";
-    total_str+=total.toString();
+    String totalnum=total.toString();
+    String totalnum_str=totalnum.replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),(Match match) => '${match[1]}.');
+    total_str="Total a Pagar: \$";
+    total_str+=totalnum_str;
     return total_str;
   }
 

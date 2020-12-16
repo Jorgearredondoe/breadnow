@@ -290,3 +290,50 @@ signin.dart|Se configura la página signin para que incluya validación por medi
 </p>
 <br>
 <br>
+
+
+---------------------------------------------
+
+## **Commit: 3.5.1 16-12-2020**
+Se agregan dos botones para los productos. Uno agrega productos al carrito y siempre esta disponible (es verde), el otro quita productos al carrito y solo está disponible cuando existen productos en el carrito (es rojo). Esto permite agregar mas de 1 una unidad de un mismo producto al carrito, ya que anteriormente solo se podía agregar 1 unidad.
+Al carrito de compra se le agrega el signo $ al total, además de agregar la puntuación (.) de los numeros grandes, utilizando Regex. 
+Se crea el nuevo archivo bottombar.dart, el cual controla totalmente la barra inferior de home y le permite ser funcional. Actualmente solo el icono home lleva a homescreen, mientras que los demas iconos solo llevan a placeholders (profile.dart, search.dart, more.dart, create.dart). 
+
+
+Archivo | Comentario
+--------|------------
+popu_cafe.dart|Se agregan los botones de "agregar" y "quitar" del carrito. Se remueve la barra inferior.
+popu_donuts.dart|Se agregan los botones de "agregar" y "quitar" del carrito. Se remueve la barra inferior.
+popu_marraqueta.dart|Se agregan los botones de "agregar" y "quitar" del carrito. Se remueve la barra inferior.
+popu_pie.dart|Se agregan los botones de "agregar" y "quitar" del carrito. Se remueve la barra inferior.
+home_screen.dart|Se remueve la barra inferior, ya que ahora se la otorga el archivo bottombar.
+cart.dart|El monto total ahora tiene puntuación de milesimas y signo $.
+register_complete.dart|Redirecciona a bottombar.dart
+bottombar.dart|Archivo principal de la barra inferior, la cual direcciona a home_screen, create, profile, more y search.
+create.dart|Placeholder
+more.dart|Placeholder
+profile.dart|Placeholder
+search.dart|Placeholder
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_16_1.jpeg">
+</p>
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_16_2.jpeg">
+</p>
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_16_3.jpeg">
+</p>
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_16_4.jpeg">
+</p>
+
+<br>
+<br>
+
+
+---------------------------------------------
+

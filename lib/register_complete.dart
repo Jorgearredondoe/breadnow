@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:breadnow/home_screen.dart';
+import 'package:breadnow/bottombar.dart';
+
 
 class register_comp extends StatelessWidget {
   @override
@@ -42,7 +44,7 @@ class register_comp extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => homescreen()),
+                MaterialPageRoute(builder: (context) => bottom_bar()),
               );
             },
             color: Colors.blue[900],
