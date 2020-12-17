@@ -16,10 +16,138 @@ Aplicación móvil de agendamiento de pan y pastelería, con entrega delivery y 
 <br>
 <br>
 
-
+---------------------------------------------
 ---------------------------------------------
 
+# **Funcionalidades**
 
+A continuación se describen las funcionalidades que tiene actualmente la app.
+
+## **Ingreso**
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva1.JPG">
+</p>
+
+Existen dos formas de ingresar a la aplicación:
+
+<ul>
+<li>Registrarse: Utilizando datos básicos del usuario </li>
+<li>Login: Utilizando un usuario existente </li>
+</ul>
+
+(Insertar imagen main)
+
+### **Registrar**
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_sign1.jpeg">
+</p>
+Requiere que el usuario ingrese los siguientes datos para ser registrado a la app: 
+<ul>
+<li>Nombre y apellido </li>
+<li>Email </li>
+<li>Número de telefono </li>
+<li>Contraseña </li>
+</ul>
+Este formulario evita que no se ingresen datos o se ingresen datos erróneos con la utilziación de Regex o Regular Expressions.
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/image_sign2.jpeg">
+</p>
+
+### **Login**
+Si es que el usuario se encuentra registrado, podrá ingresar a la app por medio de esta vía. Actualmente solo se puede ingresar con el usuario joarredondo@alumnos.uai.cl y admin (contraseña: admin), debido a que solo estos dos se encuentran registrados.
+Al igual que en el caso de registrarse, si esta se envía vacia o los datos son erróneos no permitirá el ingreso a la app.
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva2.JPG">
+</p>
+
+Una vez realizado el login o el registro aparecerá la siguiente image:
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva3.JPG">
+</p>
+
+## **Home**
+El home de la app permite ingresar a las múltiples categorías de catálogos de productos o bien utilizar la barra inferior, la cual permite desplazarse y redirigirse a distintas opciones y páginas.
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva4.JPG">
+</p>
+
+## **Catalogos**
+Existen múltiples catálogos de productos dentro de la aplicación. Todos estos catalogos permiten agregar o remover productos al carrito, por medio de botones interactivos (verde y rojo).
+
+### **Populares Donuts**+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva5.JPG">
+</p>
+
+### **Populares Pan**
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva6.JPG">
+</p>
+
+### **Populares Pasteles**
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva7.JPG">
+</p>
+
+### **Populares Café**
+
+<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva8.JPG">
+</p>
+
+## **Carrito de Compras**
+Una vez se agreguen productos al carrito por medio de los catálogos, estos podrán ser visualizados en el carrito de compra, donde aparecerá el monto total del pedido. También será posible eliminar productos del carrito, lo que provoca que este se actualice.
+
+<<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva9.JPG">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva14.JPG">
+</p>
+
+## **Pizarra de Producto Personalizable**
+
+En la barra inferior de la página Home, podrás hacer click en "Crear", lo cual te redireccionará a la pizarra donde podrás dibujar y personalizar tu producto. 
+
+<<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva10.JPG">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva11.JPG">
+</p>
+
+Una vez personalizado el producto, será dirigido a la página donde podrá seleccionar las dimensiones y características del producto, tales como, largo, alto, ancho, tipo de masa y observaciones.
+<<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva12.JPG">
+</p>
+
+Cuando el producto este listo y haya sido enviado, aparecerá el siguiente mensaje de confirmación.
+
+<<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva13.JPG">
+</p>
+
+## **Pérfil**
+
+Por último, la ultima funcionalidad de la aplicación corresponde al perfil de usuario. En esta página se puede observar todos los datos del usuario, ademas de poder ver distintas características de la cuenta, tales como "Locales Favoritos", "Pagos", "Promociones", "Notificaciones", "Modificar Cuenta" o "Ayuda".
+
+<<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva15.JPG">
+</p>
+
+<<p align="center">
+  <img width="%50"  src="https://raw.githubusercontent.com/Jorgearredondoe/breadnow/master/assets/breadnow imagenes/Diapositiva16.JPG">
+</p>
+
+
+
+
+
+
+
+---------------------------------------------
+---------------------------------------------
+
+# **Versiones**
 ## **Commit1 19-11-2020**
 
 Se respalda todos el código programado hasta el momento. Esto incluye:
@@ -337,3 +465,20 @@ search.dart|Placeholder
 
 ---------------------------------------------
 
+
+## **Commit: 3.6.1 16-12-2020**
+
+En esta versión se agrega la opci+on de iniciar sesión haciendo click en "¿Ya tienes cuenta?, Ingresa Aquí", del archivo main.dart. Esto redirige al archivo login.dart, donde se debe iniciar sesión. Para testing, se puede utilizr admin@breadnow.cl con la contraseña admin.
+Se agrega pizarra para dibujar su producto personalizado en conjunto con campo de texto para ingresar las medidas y características del producto personalizado.
+Por último, se agrega el perfil del usuario, donde se puede visualizar sus datos y otras opciones de la cuenta.
+
+
+Archivo | Comentario
+--------|------------
+main.dart|Redirige a login.dart
+login.dart|Permite iniciar sesión.
+user.dart|Archivo que crea la lista con los usuarios registrados
+create.dart|Archivo base de crear el producto. En este principalmente se puede dibujar el producto, con multiples opciones de colores y tamaños de lápiz. Esta página luego redirige a create_car.dart y a la vez guarda la imagen del producto creado.
+create_char.dart|En esta se entregan las medidas y características del producto personalizado.
+create_comp.dart|Pantalla de confirmación de creación de producto.
+profile.dart|Se agrega el perfil de usuario en conjunto con distintas opciones de cuenta.

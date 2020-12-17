@@ -1,9 +1,10 @@
 
+import 'package:breadnow/login.dart';
 import 'package:flutter/material.dart';
 import 'package:breadnow/signin.dart';
 import 'package:breadnow/home_screen.dart';
 import 'package:breadnow/products.dart';
-
+import 'package:breadnow/login.dart';
 
 
 void main() {
@@ -37,7 +38,11 @@ class MyHomePage extends StatefulWidget {
 }
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  final List<Widget> users=[
 
+  ];
+
+  
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -83,7 +88,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
             ), 
             ),
-          Text("¿Ya tienes cuenta?, Ingresa Aquí", style: TextStyle(fontSize:12, fontStyle: FontStyle.normal,fontWeight: FontWeight.bold, color: Colors.blue[900]),),
+             TextButton(
+            child:Text("¿Ya tienes cuenta?, Ingresa Aquí", style: TextStyle(fontSize:15, fontStyle: FontStyle.normal,fontWeight: FontWeight.bold, color: Colors.blue[900]),),
+            onPressed: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => login_bread()),
+              );
+            },
+             ),
+          //Text("¿Ya tienes cuenta?, Ingresa Aquí", style: TextStyle(fontSize:12, fontStyle: FontStyle.normal,fontWeight: FontWeight.bold, color: Colors.blue[900]),),
           ],
           
         ),

@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   rounded_loading_button: ^1.0.0
+  whiteboardkit: ^0.2.2
   flutter:
     sdk: flutter
     
@@ -86,6 +87,8 @@ flutter:
     - assets/images/frapuccino.jpeg
     - assets/images/frapuccino2.jpeg
     - assets/images/latte.jpeg
+    - assets/images/profile.jpg
+
 
 
 
